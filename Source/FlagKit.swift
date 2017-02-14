@@ -9,26 +9,26 @@
 import Foundation
 
 open class FlagKit {
-  public enum SpecialFlag: String {
-    case World = "WW"
-    case EuropeanUnion = "EU"
-    case NorthAmerica = "WW-NAM"
-    case SouthAmerica = "WW-SAM"
-    case Europe = "WW-EUR"
-    case Africa = "WW-AFR"
-    case Asia = "WW-ASI"
-    case Oceania = "WW-AUS"
-    case California = "US-CA"
-    case Skåne = "SE-SKA"
-    case England = "GB-ENG"
-    case Scotland = "GB-SCT"
-    case Wales = "GB-WLS"
-    case Pride = "LGBT"
-  }
-
-  open class var assetBundle: Bundle {
-    get {
-      return Bundle(for: FlagKit.self)
+    public enum SpecialFlag: String {
+        case World = "WW"
+        case EuropeanUnion = "EU"
+        case NorthAmerica = "WW-NAM"
+        case SouthAmerica = "WW-SAM"
+        case Europe = "WW-EUR"
+        case Africa = "WW-AFR"
+        case Asia = "WW-ASI"
+        case Oceania = "WW-AUS"
+        case California = "US-CA"
+        case Skåne = "SE-SKA"
+        case England = "GB-ENG"
+        case Scotland = "GB-SCT"
+        case Wales = "GB-WLS"
+        case Pride = "LGBT"
     }
-  }
+    
+    open class var assetBundle: Bundle {
+        get {
+            return Bundle(for: FlagKit.self)
+        }
+    }
 }
