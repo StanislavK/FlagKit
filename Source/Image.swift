@@ -16,7 +16,7 @@
 
 public extension Image {
     #if os(OSX)
-    public convenience init?(flagImageWithCountryCode countryCode: String) {
+    public convenience init?(flagImageWith countryCode: String) {
         guard let image = FlagKit.assetBundle.image(forResource: countryCode) else {
             return
         }
@@ -27,12 +27,12 @@ public extension Image {
         self.init(cgImage: CGImage, size: image.size)
     }
     #else
-    public convenience init?(flagImageWithCountryCode countryCode: String) {
+    public convenience init?(flagImageWith countryCode: String) {
         self.init(named: countryCode, in: FlagKit.assetBundle, compatibleWith:nil)
     }
     #endif
     
-    public convenience init?(flagImageForSpecialFlag specialFlag: FlagKit.SpecialFlag) {
-        self.init(flagImageWithCountryCode: specialFlag.rawValue)
+    public convenience init?(flagImageFor specialFlag: FlagKit.SpecialFlag) {
+        self.init(flagImageWith: specialFlag.rawValue)
     }
 }
