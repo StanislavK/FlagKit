@@ -24,7 +24,7 @@ public extension Image {
   
 #else
   public convenience init?(flagImageWithCountryCode countryCode: String) {
-    self.init(named:countryCode, inBundle:FlagKit.assetBundle, compatibleWithTraitCollection:nil)
+    self.init(named:countryCode, in:FlagKit.assetBundle, compatibleWith:nil)
   }
 #endif
 
